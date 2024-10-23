@@ -1,0 +1,48 @@
+.goBack {
+  border: 1px, solid, lightblue;
+  border-radius: 8px;
+  background-color: #051e2d;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.goBack:active,
+.goBack:focus {
+  border-color: blue;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+.title {
+  margin-top: 0;
+}
+.desTitle {
+  margin-left: 30px;
+}
+.additional {
+  margin-top: 80px;
+  border-top: 1px solid lightblue;
+  /* text-align: left; */
+}
+.additionalLink {
+  text-align: left;
+  display: flex;
+}
+.revCast {
+  border: 1px, solid, lightblue;
+  border-radius: 8px;
+  background-color: #051e2d;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
