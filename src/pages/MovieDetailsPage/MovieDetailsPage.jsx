@@ -12,8 +12,8 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const backlink = useRef(location.state ?? '/'); //in case the link was send to you and there is no state
 
-  const [showCast, setShowCast] = useState(false);
-  const [showReviews, setShowReviews] = useState(false);
+  //   const [showCast, setShowCast] = useState(false);
+  //   const [showReviews, setShowReviews] = useState(false);
 
   const defaultImg =
     'https://dl-media.viber.com/10/share/2/long/vibes/icon/image/0x0/95e0/5688fdffb84ff8bed4240bcf3ec5ac81ce591d9fa9558a3a968c630eaba195e0.jpg';
@@ -74,22 +74,10 @@ const MovieDetailsPage = () => {
                 className={css.revCast}
                 to="reviews"
                 state={backlink.current}
-                onClick={() => {
-                  setShowCast(false);
-                  setShowReviews(true);
-                }}
               >
                 Reviews
               </Link>
-              <Link
-                className={css.revCast}
-                to="cast"
-                state={backlink.current}
-                onClick={() => {
-                  setShowCast(true);
-                  setShowReviews(false);
-                }}
-              >
+              <Link className={css.revCast} to="cast" state={backlink.current}>
                 Cast
               </Link>
             </div>
@@ -97,8 +85,7 @@ const MovieDetailsPage = () => {
         </div>
       )}
       <div>
-        {showCast && <Outlet />}
-        {showReviews && <Outlet />}
+        <Outlet />
       </div>
     </div>
   );
